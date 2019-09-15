@@ -49,6 +49,7 @@ class Ffmpeg < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
+      --extra-cflags="-fno-stack-check"
       --enable-ffplay
       --enable-gnutls
       --enable-gpl
