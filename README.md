@@ -2,7 +2,8 @@
 Default ffmpeg formula with fdk-aac.
 
 # Changes from the original formula
-This formula adds `--enable-libfdk-aac` and `--enable-nonfree` args.
+This formula adds `--enable-libfdk-aac`, `--enable-nonfree` and `--extra-cflags="-fno-stack-check"` args.
+The last is workaround for building on Catalina.
 
 # Why
 homebrew vanilla ffmpeg formula is missing `libfdk-aac` due to license issues.
