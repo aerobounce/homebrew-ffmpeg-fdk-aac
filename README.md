@@ -3,10 +3,12 @@ Default ffmpeg formula with fdk-aac.
 
 # Changes from the original formula
 This formula adds these arguments:
+
 - `--enable-libfdk-aac`
 - `--enable-nonfree`
 - `--extra-cflags="-fno-stack-check"`
-The last one is workaround for building on macOS Catalina.
+
+The last one is workaround for building on macOS Catalina: https://trac.ffmpeg.org/ticket/8073#comment:12
 
 # Install
 `brew install aerobounce/ffmpeg-fdk-aac/ffmpeg`
