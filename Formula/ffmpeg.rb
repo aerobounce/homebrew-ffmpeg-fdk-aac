@@ -11,7 +11,6 @@ class Ffmpeg < Formula
 
   depends_on "nasm" => :build
   depends_on "pkg-config" => :build
-  depends_on "texi2html" => :build
 
   depends_on "aom"
   depends_on "fontconfig"
