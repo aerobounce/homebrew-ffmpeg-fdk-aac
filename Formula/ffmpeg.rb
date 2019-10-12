@@ -13,6 +13,7 @@ class Ffmpeg < Formula
   depends_on "pkg-config" => :build
 
   depends_on "aom"
+  depends_on "fdk-aac"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "frei0r"
@@ -38,8 +39,6 @@ class Ffmpeg < Formula
   depends_on "x265"
   depends_on "xvid"
   depends_on "xz"
-
-  depends_on "fdk-aac"
 
   def install
     args = %W[
