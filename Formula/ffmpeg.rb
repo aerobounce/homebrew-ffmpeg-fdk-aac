@@ -87,6 +87,7 @@ class Ffmpeg < Formula
       --enable-libsoxr
       --enable-libfdk-aac
       --enable-nonfree
+      --disable-htmlpages
     ]
 
     system "./configure", *args
