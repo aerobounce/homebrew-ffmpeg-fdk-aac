@@ -9,8 +9,8 @@ class Ffmpeg < Formula
 
   bottle :unneeded
 
-  depends_on "nasm" => :build
-  depends_on "pkg-config" => :build
+  depends_on "nasm"
+  depends_on "pkg-config"
 
   depends_on "aom"
   depends_on "fdk-aac"
