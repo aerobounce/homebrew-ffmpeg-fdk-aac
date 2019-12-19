@@ -81,7 +81,6 @@ class Ffmpeg < Formula
       --enable-videotoolbox
       --disable-libjack
       --disable-indev=jack
-      --enable-libaom
       --enable-libsoxr
       --enable-libfdk-aac
       --enable-nonfree
