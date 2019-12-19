@@ -41,6 +41,11 @@ class Ffmpeg < Formula
   depends_on "xz"
 
   def install
+    # Work around Xcode 11 clang bug
+    # https://trac.ffmpeg.org/ticket/8073#comment:12
+    # https://bitbucket.org/multicoreware/x265/issues/514/wrong-code-generated-on-macos-1015
+    ENV.append_to_cflags "-fno-stack-check" if DevelopmentTools.clang_build_version >= 1010
+
     args = %W[
       --prefix=#{prefix}
       --enable-shared
@@ -50,7 +55,6 @@ class Ffmpeg < Formula
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
-      --extra-cflags="-fno-stack-check"
       --enable-ffplay
       --enable-gnutls
       --enable-gpl
